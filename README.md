@@ -1,5 +1,5 @@
-# my-nuxt-app
-
+# PerZeption
+[![pages](https://github.com/perzeption/perzeption.github.io/workflows/pages/badge.svg)](https://github.com/perzeption/perzeption.github.io/actions?query=workflow%3Apages)
 ## Build Setup
 
 ```bash
