@@ -1,0 +1,14 @@
+[
+  {
+    "name": "inspire",
+    "path": "/inspire",
+    "component": "/Users/nathsu/Projects/perZeption/pages/inspire.vue",
+    "chunkName": "pages/inspire"
+  },
+  {
+    "name": "index",
+    "path": "/",
+    "component": "/Users/nathsu/Projects/perZeption/pages/index.vue",
+    "chunkName": "pages/index"
+  }
+]
