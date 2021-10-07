@@ -1,0 +1,11 @@
+{
+  "entry": "server.js",
+  "files": {
+    "pages/inspire.js": "pages/inspire.js",
+    "server.js": "server.js"
+  },
+  "maps": {
+    "pages/inspire.js": "pages/inspire.js.map",
+    "server.js": "server.js.map"
+  }
+}
