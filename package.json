@@ -6,10 +6,12 @@
     "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
-    "generate": "nuxt generate"
+    "generate": "nuxt generate",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "core-js": "^3.9.1",
+    "gh-pages": "^3.2.3",
     "nuxt": "^2.15.3"
   },
   "devDependencies": {

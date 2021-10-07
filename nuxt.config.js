@@ -1,6 +1,11 @@
 import colors from 'vuetify/es5/util/colors'
 
 export default {
+  mode: 'static',
+  router: {
+    base: '/perzeption/'
+  },
+
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     titleTemplate: '%s - PerZeption',
@@ -60,5 +65,8 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
+    analyze: {
+      analyzerMode: 'static'
+    }
   }
 }
