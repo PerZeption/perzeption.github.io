@@ -4,7 +4,6 @@ import { normalizeURL, decode } from 'ufo'
 import { interopDefault } from './utils'
 import scrollBehavior from './router.scrollBehavior.js'
 
-const _2f75e603 = () => interopDefault(import('../pages/inspire.vue' /* webpackChunkName: "pages/inspire" */))
 const _0e4d103b = () => interopDefault(import('../pages/index.vue' /* webpackChunkName: "pages/index" */))
 
 const emptyFn = () => {}
@@ -13,16 +12,12 @@ Vue.use(Router)
 
 export const routerOptions = {
   mode: 'history',
-  base: '/perzeption/',
+  base: '/',
   linkActiveClass: 'nuxt-link-active',
   linkExactActiveClass: 'nuxt-link-exact-active',
   scrollBehavior,
 
   routes: [{
-    path: "/inspire",
-    component: _2f75e603,
-    name: "inspire"
-  }, {
     path: "/",
     component: _0e4d103b,
     name: "index"

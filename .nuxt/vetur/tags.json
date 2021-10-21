@@ -1,8 +1,14 @@
 {
-  "Logo": {
-    "description": "Auto imported from components/Logo.vue"
+  "NuxtLogo": {
+    "description": "Auto imported from components/NuxtLogo.vue"
   },
-  "VuetifyLogo": {
-    "description": "Auto imported from components/VuetifyLogo.vue"
+  "Tutorial": {
+    "description": "Auto imported from components/Tutorial.vue"
+  },
+  "PerzeptionButton": {
+    "description": "Auto imported from components/perzeption-button.vue"
+  },
+  "PerzeptionNavigation": {
+    "description": "Auto imported from components/perzeption-navigation.vue"
   }
 }

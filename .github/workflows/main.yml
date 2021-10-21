@@ -1,21 +1,31 @@
 env:
   source_branch: main
 
-name: deploy
-on: [push]
+name: pages
+
+# push and pull requests are made to the 'main' branch
+on:
+  push:
+    branches:
+      - 'main'
+  pull_request:
+    branches:
+      - 'main'
+
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-    - name: Install node.js (and yarn, I think)
+    - uses: actions/checkout@v2
+    - name: Install Node.js (and yarn, I think)
       uses: actions/setup-node@v2-beta
       with:
         node-version: '12.x'
+    # https://github.com/actions/cache/blob/master/examples.md#node---yarn
     - name: Find out name of yarn cache path
       id: yarn-cache-dir-path
       run: echo "::set-output name=dir::$(yarn cache dir)"
-    - name: Cache yarn stuff
+    - name: Cache yarn
       uses: actions/cache@v2
       id: yarn-cache
       with:
@@ -23,6 +33,7 @@ jobs:
         key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
         restore-keys: |
           ${{ runner.os }}-yarn-
+
     # actual stuff starts here
     - name: Install dependencies using yarn
       run: yarn install
@@ -39,9 +50,9 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     # only run deploy if trigger is source branch
-    if: github.ref == 'refs/heads/vue'
+    if: github.ref == 'refs/heads/main'
     steps:
-      - name: Get artifcats from build
+      - name: Get artifacts from build
         uses: actions/download-artifact@v2
         with:
           name: dist

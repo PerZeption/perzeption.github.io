@@ -1,7 +1,35 @@
-import { wrapFunctional } from './utils'
+export { default as NuxtLogo } from '../../components/NuxtLogo.vue'
+export { default as Tutorial } from '../../components/Tutorial.vue'
+export { default as PerzeptionButton } from '../../components/perzeption-button.vue'
+export { default as PerzeptionNavigation } from '../../components/perzeption-navigation.vue'
 
-export { default as Logo } from '../../components/Logo.vue'
-export { default as VuetifyLogo } from '../../components/VuetifyLogo.vue'
+// nuxt/nuxt.js#8607
+function wrapFunctional(options) {
+  if (!options || !options.functional) {
+    return options
+  }
 
-export const LazyLogo = import('../../components/Logo.vue' /* webpackChunkName: "components/logo" */).then(c => wrapFunctional(c.default || c))
-export const LazyVuetifyLogo = import('../../components/VuetifyLogo.vue' /* webpackChunkName: "components/vuetify-logo" */).then(c => wrapFunctional(c.default || c))
+  const propKeys = Array.isArray(options.props) ? options.props : Object.keys(options.props || {})
+
+  return {
+    render(h) {
+      const attrs = {}
+      const props = {}
+
+      for (const key in this.$attrs) {
+        if (propKeys.includes(key)) {
+          props[key] = this.$attrs[key]
+        } else {
+          attrs[key] = this.$attrs[key]
+        }
+      }
+
+      return h(options, {
+        on: this.$listeners,
+        attrs,
+        props,
+        scopedSlots: this.$scopedSlots,
+      }, this.$slots.default)
+    }
+  }
+}

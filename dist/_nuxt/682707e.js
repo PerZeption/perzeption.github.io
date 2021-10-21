@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[2],{267:function(t,e,n){"use strict";n.r(e);var l=n(27),c=n(97),o=n.n(c),r=n(265),w=n(266),component=Object(l.a)({},(function(){var t=this.$createElement,e=this._self._c||t;return e("v-row",[e("v-col",{staticClass:"text-center"})],1)}),[],!1,null,null,null);e.default=component.exports;o()(component,{VCol:r.a,VRow:w.a})}}]);

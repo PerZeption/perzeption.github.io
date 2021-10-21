@@ -1,0 +1,18 @@
+@import './_variables';
+
+body {
+    font-family: $perzeption-font-family;
+}
+
+a {
+    text-decoration: none;
+    font-size: $perzeption-text;
+}
+
+h1 {
+    font-size: $perzeption-h1;
+}
+
+p {
+    font-size: $perzeption-text;
+}
