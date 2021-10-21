@@ -49,8 +49,6 @@ jobs:
     # build before deploy
     needs: build
     runs-on: ubuntu-latest
-    # only run deploy if trigger is source branch
-    if: github.ref == 'refs/heads/main'
     steps:
       - name: Get artifacts from build
         uses: actions/download-artifact@v2
