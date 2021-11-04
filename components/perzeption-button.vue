@@ -1,10 +1,6 @@
 <template>
-    <a :href="link" target="_blank">
-        <div class="perzeption-button">
-            <div class="perzeption-button__content">
-                <slot />
-            </div>
-        </div>
+    <a class="perzeption-button" :href="link" target="_blank">
+        <slot />
     </a>
 </template>
 
@@ -29,14 +25,12 @@ props: {
 
 .perzeption-button {
     background-color: $perzeption-active-color;
-    color: white;
-    font-weight: 550;
     max-width: fit-content;
+    max-height: fit-content;
     border-radius: 10px;
-
-    &__content {
-        padding: 20px;
-    }
+    font-weight: 550;
+    color: white;
+    padding: 20px;
 }
 
 </style>

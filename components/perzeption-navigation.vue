@@ -16,7 +16,7 @@
     max-width: 35vw;
 
     a {
-        color: black;
+        color: $perzeption-nav-color;
     }
 
     .nuxt-link-active {

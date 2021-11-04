@@ -1,6 +1,7 @@
 export { default as NuxtLogo } from '../../components/NuxtLogo.vue'
 export { default as Tutorial } from '../../components/Tutorial.vue'
 export { default as PerzeptionButton } from '../../components/perzeption-button.vue'
+export { default as PerzeptionHomeBg } from '../../components/perzeption-home-bg.vue'
 export { default as PerzeptionNavigation } from '../../components/perzeption-navigation.vue'
 
 // nuxt/nuxt.js#8607

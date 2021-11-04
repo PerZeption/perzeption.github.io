@@ -9,4 +9,5 @@ You can directly use them in pages and other components without the need to impo
 - `<NuxtLogo>` | `<nuxt-logo>` (components/NuxtLogo.vue)
 - `<Tutorial>` | `<tutorial>` (components/Tutorial.vue)
 - `<PerzeptionButton>` | `<perzeption-button>` (components/perzeption-button.vue)
+- `<PerzeptionHomeBg>` | `<perzeption-home-bg>` (components/perzeption-home-bg.vue)
 - `<PerzeptionNavigation>` | `<perzeption-navigation>` (components/perzeption-navigation.vue)
