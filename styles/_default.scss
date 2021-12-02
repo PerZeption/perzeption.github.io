@@ -2,9 +2,8 @@
 
 body {
     font-family: $perzeption-font-family;
-    margin: unset;
-    padding: unset;
-    margin-top: -50px;
+    margin: 0;
+    padding: 0;
 }
 
 a {
@@ -14,6 +13,10 @@ a {
 
 h1 {
     font-size: $perzeption-h1;
+}
+
+h2 {
+    font-size: $perzeption-h2;
 }
 
 p {

@@ -1,10 +1,12 @@
 <template>
   <!-- <Tutorial/> -->
   <section class="perzeption-home">
+
     <div class="perzeption-home__main">
-      <div class="perzeption-home__main--half">
-        <perzeption-navigation />
-        <div class="perzeption-home__content">
+      <perzeption-navigation />
+
+      <div class="perzeption-navigation__content">
+        <div class="perzeption-home__content--text">
           <h1>Keep an eye on your <span class="perzeption-home__vision">vision</span>.</h1>
           <p class="perzeption-home__desc">This is a paragraph with an explanation. These sentences are short, 
           and give a brief overview. It’s good to be a description.</p>
@@ -13,8 +15,10 @@
             Call to action large button
           </perzeption-button>
         </div>
+
+        <img class="perzeption-home__content--illust" src="../assets/perzeption-illust.svg"/>
       </div>
-      <!-- <perzeption-home-bg /> -->
+    </div>
 
       <div class="perzeption-home__demo">
         <h1>Try out our test</h1>
@@ -24,8 +28,6 @@
           </perzeption-button>
 
       </div>
-
-    </div>
 
     <div class="perzeption-home__product">
       <div class="perzeption-home__product--content">
@@ -43,18 +45,17 @@
           Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
         </p>
 
-        <carousel 
-          navigation-enabled>
-          <slide>
-            <img src="../assets/acuity.png" />
-          </slide>
-          <slide>
-            <img src="../assets/color.png" />
-          </slide>
-          <slide>
-            <img src="../assets/contrast.png" />
-          </slide>
-        </carousel>
+    <swiper class="swiper" :options="loopSwiper">
+      <swiper-slide>
+        <img src="../assets/acuity.png" />
+      </swiper-slide>
+      <swiper-slide>
+        <img src="../assets/color.png" />
+      </swiper-slide>
+      <swiper-slide>
+        <img src="../assets/contrast.png" />
+      </swiper-slide>
+    </swiper>
         
         </div>
 
@@ -69,36 +70,12 @@
             Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
           </p>
 
-          <carousel 
-          navigation-enabled>
-          <slide>
-            <img src="../assets/acuity.png" />
-          </slide>
-          <slide>
-            <img src="../assets/color.png" />
-          </slide>
-          <slide>
-            <img src="../assets/contrast.png" />
-          </slide>
-        </carousel>
         </div>
       </div>
     </div>
 
     <div class="perzeption-home__about">
       <h1>About</h1>
-
-      <carousel>
-          <slide>
-            <img src="../assets/acuity.png" />
-          </slide>
-          <slide>
-            <img src="../assets/color.png" />
-          </slide>
-          <slide>
-            <img src="../assets/contrast.png" />
-          </slide>
-        </carousel>
 
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
@@ -120,11 +97,14 @@
 </template>
 
 <script>
+  import { Swiper, SwiperSlide } from 'vue-awesome-swiper'
+  import 'swiper/css/swiper.css'
+
 import perzeptionNavigation from '@/components/perzeption-navigation.vue';
 import perzeptionButton from '@/components/perzeption-button.vue';
 import perzeptionHomeBg from '@/components/perzeption-home-bg.vue';
 import perzeptionFooter from '@/components/perzeption-footer.vue';
-import { Carousel, Slide } from 'vue-carousel';
+
 
 export default {
   name: 'perzeption-home',
@@ -133,9 +113,20 @@ export default {
     perzeptionButton,
     perzeptionHomeBg,
     perzeptionFooter,
-    Carousel,
-    Slide,
-  }
+    Swiper, 
+    SwiperSlide,
+  },
+  data() {
+      return {
+        loopSwiper: {
+          slidesPerView: 'auto',
+          spaceBetween: 50,
+          grabCursor: true,
+          mousewheel: true,
+          loop: true
+        }
+      }
+    }
 }
 </script>
 
@@ -143,25 +134,38 @@ export default {
 @import '../styles/_base';
 
 .perzeption-home {
+  .swiper-slide {
+    width: 30vw;
 
-  &__main {
-      background-image: url("./assets/perzep-bg.svg");
-      background-attachment: fixed;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-
-    &--half {
-      @extend %perzeption-light-page;
-      position: relative;
-      width: 50vw;
-      margin: 50px 0;
-      padding: 30px;
-      padding-right: 100px;
-      padding-left: 120px;
-      z-index: 1;
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
   }
+
+
+  &__main {
+    @extend %fade-down-in-fast;
+    @extend %perzeption-light-page;
+  }
+
+  &__content {
+    min-width: 95vw;
+    display: flex;
+    flex-wrap: row wrap;
+    justify-content: space-around;
+
+      &--text {
+        display: inline-block;
+        width: 40vw;
+      }
+
+      &--illust {
+        width: 500px;
+      }
+    }
 
   &__demo {
     @extend %perzeption-dark-page;
@@ -173,12 +177,6 @@ export default {
 
   &__product {
     @extend %perzeption-light-page;
-  }
-
-  &__content {
-    @extend %fade-down-in-fast;
-    margin-top: 120px;
-    width: 38vw;
   }
 
   &__vision {

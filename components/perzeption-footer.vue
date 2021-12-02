@@ -11,9 +11,12 @@ export default {
 </script>
 
 <style lang="scss">
+@import '../styles/_base';
+
 .perzeption-footer {
-    background-color:white;
-    color: black;
+    background-color:$perzeption-light-bg;
+    color: $perzeption-text-color;
+    padding-left: $perzeption-page-padding;
     height: 10vh;
 }
 </style>
