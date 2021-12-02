@@ -17,7 +17,11 @@
       <!-- <perzeption-home-bg /> -->
 
       <div class="perzeption-home__demo">
-
+        <h1>Try out our test</h1>
+        <p>This short trial will show you what we’re all about. Get accurate results with just a few short questions.</p>
+        <perzeption-button link="https://google.com">
+            Let's go!
+          </perzeption-button>
 
       </div>
 
@@ -39,17 +43,19 @@
           Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
         </p>
 
-        <swiper 
-        :direction="'horizontal'" 
-        :slidesPerView="3" 
-        :freeMode="true" 
-        :scrollbar="true" 
-        :mousewheel="true" 
-        class="mySwiper">
-          <swiper-slide>
-            Slide 1
-          </swiper-slide>
-        </swiper>
+        <carousel 
+          navigation-enabled>
+          <slide>
+            <img src="../assets/acuity.png" />
+          </slide>
+          <slide>
+            <img src="../assets/color.png" />
+          </slide>
+          <slide>
+            <img src="../assets/contrast.png" />
+          </slide>
+        </carousel>
+        
         </div>
 
 
@@ -62,48 +68,75 @@
             Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
             Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
           </p>
+
+          <carousel 
+          navigation-enabled>
+          <slide>
+            <img src="../assets/acuity.png" />
+          </slide>
+          <slide>
+            <img src="../assets/color.png" />
+          </slide>
+          <slide>
+            <img src="../assets/contrast.png" />
+          </slide>
+        </carousel>
         </div>
       </div>
-
     </div>
 
-    <div>
+    <div class="perzeption-home__about">
+      <h1>About</h1>
 
+      <carousel>
+          <slide>
+            <img src="../assets/acuity.png" />
+          </slide>
+          <slide>
+            <img src="../assets/color.png" />
+          </slide>
+          <slide>
+            <img src="../assets/contrast.png" />
+          </slide>
+        </carousel>
 
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </p>
+
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </p>
     </div>
+
+    <perzeption-footer />
   </section>
 </template>
 
-<script lang="ts">
-import Vue from 'vue';
-import perzeptionNavigation from '../components/perzeption-navigation.vue';
-import perzeptionButton from '../components/perzeption-button.vue';
-import perzeptionHomeBg from '../components/perzeption-home-bg.vue';
+<script>
+import perzeptionNavigation from '@/components/perzeption-navigation.vue';
+import perzeptionButton from '@/components/perzeption-button.vue';
+import perzeptionHomeBg from '@/components/perzeption-home-bg.vue';
+import perzeptionFooter from '@/components/perzeption-footer.vue';
+import { Carousel, Slide } from 'vue-carousel';
 
-// Import Swiper Vue.js components
-import { Swiper, SwiperSlide } from 'swiper/vue';
-
-// Import Swiper styles
-  import 'swiper/css';
-
-// import Swiper core and required modules
-import SwiperCore, {
-  FreeMode,Scrollbar,Mousewheel
-} from 'swiper';
-
-// install Swiper modules
-SwiperCore.use([FreeMode,Scrollbar,Mousewheel]);
-
-export default Vue.extend({
+export default {
   name: 'perzeption-home',
   components: {
     perzeptionNavigation,
     perzeptionButton,
     perzeptionHomeBg,
-    Swiper,
-    SwiperSlide,
+    perzeptionFooter,
+    Carousel,
+    Slide,
   }
-})
+}
 </script>
 
 <style lang="scss">
@@ -113,13 +146,15 @@ export default Vue.extend({
 
   &__main {
       background-image: url("./assets/perzep-bg.svg");
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
 
     &--half {
+      @extend %perzeption-light-page;
       position: relative;
-      background-color: white;
-      color: $perzeption-text-color;
       width: 50vw;
-      min-height: 100vh;
       margin: 50px 0;
       padding: 30px;
       padding-right: 100px;
@@ -129,15 +164,15 @@ export default Vue.extend({
   }
 
   &__demo {
-    min-height: 100vh;
-    background-color: $perzeption-background-color;
+    @extend %perzeption-dark-page;
+  }
+
+  &__about {
+    @extend %perzeption-dark-page;
   }
 
   &__product {
-    margin: 60px;
-    min-height: 100vh;
-    background-color: white;
-    color: $perzeption-text-color;
+    @extend %perzeption-light-page;
   }
 
   &__content {

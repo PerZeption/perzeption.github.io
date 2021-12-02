@@ -8,6 +8,9 @@
   "PerzeptionButton": {
     "description": "Auto imported from components/perzeption-button.vue"
   },
+  "PerzeptionFooter": {
+    "description": "Auto imported from components/perzeption-footer.vue"
+  },
   "PerzeptionHomeBg": {
     "description": "Auto imported from components/perzeption-home-bg.vue"
   },
