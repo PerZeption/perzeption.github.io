@@ -28,7 +28,7 @@
             </swiper>
         </div>
 
-            <div>
+        <div>
             <h2>Inform</h2>
 
             <p>
@@ -38,8 +38,20 @@
                 Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
             </p>
 
-            </div>
+            <swiper class="swiper" :options="loopSwiper">
+                <swiper-slide>
+                <img src="../assets/acuity.png" />
+                </swiper-slide>
+                <swiper-slide>
+                <img src="../assets/color.png" />
+                </swiper-slide>
+                <swiper-slide>
+                <img src="../assets/contrast.png" />
+                </swiper-slide>
+            </swiper>
+
         </div>
+    </div>
     </section>
 </template>
 
@@ -73,6 +85,7 @@ export default {
 
 .perzeption-product {
     @extend %perzeption-light-page;
+    margin-bottom: 40px;
 
     .swiper-slide {
     width: 30vw;

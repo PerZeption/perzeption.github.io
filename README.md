@@ -1,4 +1,4 @@
-# vue-template
+# PerZeption 👀
 
 ## Project setup
 ```

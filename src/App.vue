@@ -44,3 +44,11 @@ export default {
   }
 }
 </script>
+
+<style lang="scss">
+@import './styles/_base';
+
+body { 
+  background-color: $perzeption-light-bg;
+}
+</style>

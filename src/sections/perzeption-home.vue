@@ -1,12 +1,15 @@
 <template>
     <section class="perzeption-home">
-        <div class="perzeption-home__text">
-        <h1>Keep an eye on your <span class="perzeption-home__vision">vision</span>.</h1>
-        <p class="perzeption-home__desc">This is a paragraph with an explanation. These sentences are short, 
-        and give a brief overview. It’s good to be a description.</p>
+        <div class="perzeption-home__content">
+            <div class="perzeption-home__content--text">
+                <h1>Keep an eye on your <span class="perzeption-home__vision">vision</span>.</h1>
+
+                <p>This is a paragraph with an explanation. These sentences are short, 
+                and give a brief overview. It’s good to be a description.</p>
+            </div>
 
         <perzeption-button link="https://google.com">
-        Call to action large button
+        Take the test
         </perzeption-button>
     </div>
 
@@ -29,19 +32,22 @@ export default {
 @import '../styles/_base';
 
 .perzeption-home {
-    min-width: 95vw;
-    min-height: 95vh;
+    @extend %perzeption-light-page;
     display: flex;
     flex-wrap: row wrap;
     justify-content: space-around;
 
-    &__vision {
-    color: $perzeption-active-color;
+    &__content {
+        display: inline-block;
+        width: 40vw;
+
+        &--text {
+            margin-bottom: 80px;
+        }
     }
 
-    &__text {
-    display: inline-block;
-    width: 40vw;
+    &__vision {
+        color: $perzeption-active-color;
     }
 }
 </style>

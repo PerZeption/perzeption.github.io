@@ -1,8 +1,10 @@
 <template>
     <div class="perzeption-navigation">
-        <a to="/">Perzeption 👁</a>
-        <a to="/link1">Link1</a>
-        <a to="/link2">Link2</a>
+        <a to="/"><strong>Perzeption 👁</strong></a>
+        <a to="/link1">Our Product</a>
+        <a to="/link2">Pricing Model</a>
+        <a to="/link2">About</a>
+        <a to="/link2">Pricing Model</a>
     </div>
 </template>
 
@@ -10,13 +12,15 @@
 @import '../styles/_base';
 
 .perzeption-navigation {
+    margin-left: 60px;
+    margin-top: 40px;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
-    max-width: 35vw;
+    max-width: 60vw;
 
     a {
-        color: $perzeption-nav-color;
+        color: $perzeption-text-color;
     }
 
     .nuxt-link-active {
