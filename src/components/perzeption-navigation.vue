@@ -1,10 +1,9 @@
 <template>
     <div class="perzeption-navigation">
         <a to="/"><strong>Perzeption 👁</strong></a>
-        <a to="/link1">Our Product</a>
-        <a to="/link2">Pricing Model</a>
+        <a to="/link1">Our Publications</a>
         <a to="/link2">About</a>
-        <a to="/link2">Pricing Model</a>
+        <a to="/link2">Contact</a>
     </div>
 </template>
 

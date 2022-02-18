@@ -1,10 +1,12 @@
 <template>
-    <div>
-        <a 
-        :class="'perzeption-button perzeption-button__' + this.type" 
-        :href="link" target="_blank">
-            <slot />
-        </a>
+    <div 
+    :class="'perzeption-button perzeption-button__' + this.type"  @click="$emit('click')">
+        <slot v-if="!link"/>
+
+            <a v-if="link"
+            :href="link" target="_blank">
+                <slot />
+            </a>
     </div>
 </template>
 
@@ -17,7 +19,7 @@ export default {
          */
         link: {
             type: String,
-            required: true,
+            required: false,
             default: null,
         },
         /**
@@ -25,10 +27,10 @@ export default {
          */
         type: {
             type: String,
-            required: true,
+            required: false,
             default: "default",
         }
-    },
+    }
 }
 </script>
 
@@ -36,6 +38,7 @@ export default {
 @import '../styles/_base';
 
 .perzeption-button {
+    cursor: pointer;
     max-width: fit-content;
     max-height: fit-content;
     border-radius: 10px;
@@ -48,7 +51,7 @@ export default {
     }
 
     &__outline {
-        border: 3px solid white;
+        border: solid;
     }
 }
 

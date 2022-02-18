@@ -7,10 +7,6 @@
                 <p>This is a paragraph with an explanation. These sentences are short, 
                 and give a brief overview. It’s good to be a description.</p>
             </div>
-
-        <perzeption-button link="https://google.com">
-        Take the test
-        </perzeption-button>
     </div>
 
         <img class="perzeption-home__illust" src="../assets/perzeption-illust.svg"/>
@@ -18,13 +14,9 @@
 </template>
 
 <script>
-import perzeptionButton from '@/components/perzeption-button.vue';
 
 export default {
     name: 'perzeption-home',
-    components: {
-        perzeptionButton,
-    }
 }
 </script>
 
@@ -36,6 +28,12 @@ export default {
     display: flex;
     flex-wrap: row wrap;
     justify-content: space-around;
+    padding-right: unset;
+
+    &__illust {
+        width: 500px;
+        height: auto;
+    }
 
     &__content {
         display: inline-block;

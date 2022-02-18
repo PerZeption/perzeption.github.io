@@ -14,7 +14,7 @@ export default {
 @import '../styles/_base';
 
 .perzeption-footer {
-    background-color:$perzeption-light-bg;
+    background-color:$perzeption-dark-bg;
     color: $perzeption-text-color;
     padding-left: $perzeption-page-padding;
     height: 10vh;

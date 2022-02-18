@@ -49,6 +49,6 @@ export default {
 @import './styles/_base';
 
 body { 
-  background-color: $perzeption-light-bg;
+  background-color: $perzeption-dark-bg;
 }
 </style>
