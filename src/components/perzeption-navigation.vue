@@ -11,12 +11,15 @@
 @import '../styles/_base';
 
 .perzeption-navigation {
-    margin-left: 60px;
-    margin-top: 40px;
+    z-index: 1;
+    position: sticky;
+    top: 0;
+    padding: 40px 60px;
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-between;
-    max-width: 60vw;
+    justify-content: flex-start;
+    gap: 50px;
+    background-color: $perzeption-dark-bg;
 
     a {
         color: $perzeption-text-color;

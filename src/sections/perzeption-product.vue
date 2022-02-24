@@ -8,7 +8,9 @@
             </div>
 
             <div class="perzeption-product__features">
-                <swiper class="swiper" :options="loopSwiper">
+                <swiper class="swiper" 
+                :options="swiperOption"
+                @click="nextSlide()">
                     <swiper-slide>
                     <img src="../assets/acuity.png" />
                     </swiper-slide>
@@ -18,16 +20,43 @@
                     <swiper-slide>
                     <img src="../assets/contrast.png" />
                     </swiper-slide>
+                    <div class="swiper-pagination" slot="pagination"></div>
+                    <div class="swiper-button-prev" slot="button-prev"></div>
+                    <div class="swiper-button-next" slot="button-next"></div>
                 </swiper>
 
-                <h2>Find</h2>
+                <div v-if="currSlide == 0">
+                    <h2>Find 1</h2>
 
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-                    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                </p>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+                        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </p>
+                </div>
+
+                <div v-if="currSlide == 1">
+                    <h2>Find 2</h2>
+
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+                        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </p>
+                </div>
+
+                <div v-if="currSlide == 2">
+                    <h2>Find 3</h2>
+
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+                        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </p>
+                </div>
             </div>
         </div>
     </section>
@@ -45,15 +74,32 @@ export default {
     },
     data() {
         return {
-            loopSwiper: {
-                slidesPerView: 'auto',
-                spaceBetween: 50,
-                grabCursor: true,
-                mousewheel: true,
-                loop: true
-            }
+            currSlide: 0,
+            swiperOption: {
+                slidesPerView: 1,
+                spaceBetween: 30,
+                loop: true,
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true
+                },
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev'
+                }
+            },
         }
     },
+    methods: {
+        /**
+         * Sets the current index to the index of the slide in the gallery
+         */
+        nextSlide() {
+            this.currSlide += 1;
+            if (this.currSlide >= 3)
+                this.currSlide = 0;
+        }
+    }
 
 }
 </script>
@@ -69,9 +115,14 @@ export default {
         display: flex;
     }
 
+    &__features {
+        background-color: $perzeption-card-bg;
+        width: 500px;
+    }
+
     .swiper-slide {
-    width: 30vw;
         img {
+            z-index: -1;
             display: block;
             width: 100%;
             height: 100%;

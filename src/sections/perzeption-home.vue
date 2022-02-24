@@ -27,11 +27,11 @@ export default {
     @extend %perzeption-light-page;
     display: flex;
     flex-wrap: row wrap;
-    justify-content: space-around;
-    padding-right: unset;
 
     &__illust {
-        width: 500px;
+        position: absolute;
+        right: 0;
+        width: 700px;
         height: auto;
     }
 
