@@ -2,6 +2,7 @@
     <section class="perzeption-product">
         <div class="perzeption-product__content">
             <div>
+                <img src="../assets/product-asset.svg" />
                 <h1>
                     Our Product
                 </h1>
@@ -109,14 +110,20 @@ export default {
 
 .perzeption-product {
     @extend %perzeption-light-page;
-    margin-bottom: 40px;
 
     &__content {
         display: flex;
+        flex-flow: row wrap;
+
+        h1 {
+            margin: 0;
+        }
     }
 
     &__features {
         background-color: $perzeption-card-bg;
+        padding: 80px;
+        padding-bottom: unset;
         width: 500px;
     }
 
@@ -127,6 +134,10 @@ export default {
             width: 100%;
             height: 100%;
             object-fit: cover;
+        }
+
+        .swiper-button-prev {
+            left: 0;
         }
     }
 }

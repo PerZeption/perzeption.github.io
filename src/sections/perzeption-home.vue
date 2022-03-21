@@ -25,6 +25,8 @@ export default {
 
 .perzeption-home {
     @extend %perzeption-light-page;
+    padding-top: unset;
+    margin-left: 60px;
     display: flex;
     flex-wrap: row wrap;
 
@@ -40,7 +42,7 @@ export default {
         width: 40vw;
 
         &--text {
-            margin-bottom: 80px;
+            margin-top: 30vh;
         }
     }
 

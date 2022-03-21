@@ -1,6 +1,6 @@
 <template>
   <section id="app">
-      <!-- TODO: make the navigation sticky -->
+
     <perzeption-navigation />
 
     <perzeption-home />
