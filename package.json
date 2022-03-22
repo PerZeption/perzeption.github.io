@@ -1,5 +1,5 @@
 {
-  "name": "perZeption",
+  "name": "PerZeption",
   "version": "1.0.0",
   "private": true,
   "scripts": {
@@ -8,6 +8,7 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "aos": "^2.3.4",
     "core-js": "^3.6.5",
     "swiper": "5.x",
     "vue": "^2.6.11",

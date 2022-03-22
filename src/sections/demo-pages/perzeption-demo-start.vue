@@ -18,6 +18,6 @@
 
 <script>
 export default {
-    name: ""
+    name: "perzeption-demo-start"
 }
 </script>
