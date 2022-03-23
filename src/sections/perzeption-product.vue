@@ -3,7 +3,6 @@
         <section class="perzeption-product">
             <div class="perzeption-product__content">
                 <div class="perzeption-product__label">
-                    <img src="../assets/product-asset.svg" />
                     <h1>
                         Our Product
                     </h1>
@@ -120,10 +119,6 @@ export default {
     }
 
     &__label {
-
-        h1 {
-            margin-top: 62vh;
-        }
 
         img {
             position: absolute;

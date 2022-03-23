@@ -1,5 +1,5 @@
 <template>
-    <section class="perzeption-page" data-aos="fade-up">
+    <section class="perzeption-page" data-aos="fade-up" data-aos-duration="2000">
         <slot />
     </section>
 </template>

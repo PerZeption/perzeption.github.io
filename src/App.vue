@@ -9,11 +9,6 @@
 
     <perzeption-product />
 
-    <div class="perzeption-transition">
-      <img class="perzeption-transition--left" src="./assets/left_illust.svg" />
-      <img class="perzeption-transition--right" src="./assets/right_illust.svg" />
-    </div>
-
     <perzeption-about />
 
     <perzeption-footer />
@@ -55,22 +50,5 @@ export default {
 
 body { 
   background-color: $perzeption-dark-bg;
-
-  .perzeption-transition {
-    max-width: 100vw;
-    height: 500px;
-
-    &--left {
-      width: 500px;
-      position: absolute;
-      left: 0;
-    }
-
-    &--right {
-      width: 800px;
-      position: absolute;
-      right: 0;
-    }
-  }
 }
 </style>
