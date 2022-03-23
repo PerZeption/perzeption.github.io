@@ -30,7 +30,6 @@ export default {
 @import '../styles/_base';
 
 .perzeption-home {
-    @extend %perzeption-light-page;
     padding-top: unset;
     margin-left: 60px;
     display: flex;
@@ -38,8 +37,9 @@ export default {
 
     &__illust {
         position: absolute;
+        top: 0;
         right: 0;
-        width: 700px;
+        width: 800px;
         height: auto;
     }
 

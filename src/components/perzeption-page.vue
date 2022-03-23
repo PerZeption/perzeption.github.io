@@ -13,3 +13,15 @@ export default {
     name: "perzeption-page"
 }
 </script>
+
+<style lang="scss">
+@import '../styles/_base';
+
+.perzeption-page {
+    min-height: $perzeption-min-page-height;
+    padding: $perzeption-page-padding;
+    background-color: $perzeption-dark-bg;
+    color: $perzeption-text-color;
+}
+
+</style>
