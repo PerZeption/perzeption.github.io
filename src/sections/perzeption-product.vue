@@ -2,11 +2,9 @@
     <perzeption-page>
         <section class="perzeption-product">
             <div class="perzeption-product__content">
-                <div class="perzeption-product__label">
-                    <h1>
-                        Our Product
-                    </h1>
-                </div>
+                <h1>
+                    Our Product
+                </h1>
 
                 <div class="perzeption-product__features">
                     <swiper class="swiper" 
@@ -112,39 +110,24 @@ export default {
 @import '../styles/_base';
 
 .perzeption-product {
+    background-color: $perzeption-card-bg;
+    padding: 80px;
 
     &__content {
-        display: inline-flex;
-        flex-direction: row;
-    }
-
-    &__label {
-
-        img {
-            position: absolute;
-            left: 0;
+        h1 {
+            margin: unset;
         }
     }
 
     &__features {
-        position: absolute;
-        right: 0;
-        width: 45vw;
-        background-color: $perzeption-card-bg;
+        width: 50vw;
         padding: 60px;
     }
 
     .swiper-slide {
         img {
-            z-index: -1;
             display: block;
-            width: 100%;
-            height: 100%;
             object-fit: cover;
-        }
-
-        .swiper-button-prev {
-            left: 0;
         }
     }
 }

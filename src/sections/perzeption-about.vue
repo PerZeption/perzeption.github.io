@@ -49,7 +49,8 @@ export default {
 @import '../styles/_base';
 
 .perzeption-about {
-  
+  padding: $perzeption-page-padding;
+  padding-top: unset;
 
   &__people {
     margin: 0 5vw;

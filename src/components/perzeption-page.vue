@@ -19,8 +19,6 @@ export default {
 
 .perzeption-page {
     min-height: $perzeption-min-page-height;
-    padding: $perzeption-page-padding;
-    background-color: $perzeption-dark-bg;
     color: $perzeption-text-color;
 }
 

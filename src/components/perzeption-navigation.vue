@@ -1,8 +1,8 @@
 <template>
     <div class="perzeption-navigation">
-        <a to="/"><strong>PerZeption 👁</strong></a>
+        <router-link to="/"><strong>PerZeption 👁</strong></router-link>
         <a to="/link1">Our Product</a>
-        <a to="/link1">Our Publications</a>
+        <router-link to="/publication">Our Publications</router-link>
         <a to="/link2">About</a>
         <a to="/link2">Contact</a>
     </div>

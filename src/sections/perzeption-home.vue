@@ -30,6 +30,7 @@ export default {
 @import '../styles/_base';
 
 .perzeption-home {
+    padding: $perzeption-page-padding;
     padding-top: unset;
     margin-left: 60px;
     display: flex;
