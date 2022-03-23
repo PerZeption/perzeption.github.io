@@ -1,20 +1,6 @@
 @import "./mixins";
 @import "./variables";
 
-%perzeption-dark-page {
-  min-height: 100vh;
-  padding: $perzeption-page-padding;
-  background-color: $perzeption-dark-bg;
-  color: white;
-}
-
-%perzeption-light-page {
-  min-height: 100vh;
-  padding: $perzeption-page-padding;
-  background-color: $perzeption-dark-bg;
-  color: $perzeption-text-color;
-}
-
 // Animations
 %fade-down-in-fast {
   @include animation-slide-top();

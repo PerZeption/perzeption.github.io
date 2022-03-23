@@ -113,29 +113,30 @@ export default {
 @import '../styles/_base';
 
 .perzeption-product {
-    @extend %perzeption-light-page;
-    padding: unset;
 
     &__content {
-        display: flex;
-        flex-flow: row wrap;
-        width: 100vw;
-
-        h1 {
-            margin: unset;
-            margin-left: 150px;
-        }
+        display: inline-flex;
+        flex-direction: row;
     }
 
     &__label {
-        width: 45vw;
+
+        h1 {
+            margin-top: 62vh;
+        }
+
+        img {
+            position: absolute;
+            left: 0;
+        }
     }
 
     &__features {
+        position: absolute;
+        right: 0;
         width: 45vw;
         background-color: $perzeption-card-bg;
-        padding: 80px;
-        padding-bottom: unset;
+        padding: 60px;
     }
 
     .swiper-slide {
