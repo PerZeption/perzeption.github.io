@@ -8,6 +8,8 @@
 
     <perzeption-product />
 
+    <perzeption-difference />
+
     <perzeption-about />
 
     <perzeption-footer />
@@ -26,6 +28,7 @@ import perzeptionAbout from '@/sections/perzeption-about.vue';
 // Page components
 import perzeptionHomeBg from '@/components/perzeption-home-bg.vue';
 import perzeptionFooter from '@/components/perzeption-footer.vue';
+import perzeptionDifference from './perzeption-difference.vue';
 
 export default {
   name: 'perzeption-main',
@@ -35,7 +38,8 @@ export default {
     perzeptionHome,
     perzeptionDemo,
     perzeptionProduct,
-    perzeptionAbout
+    perzeptionAbout,
+    perzeptionDifference
   }
 }
 </script>

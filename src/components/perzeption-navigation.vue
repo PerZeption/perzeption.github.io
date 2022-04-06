@@ -1,6 +1,6 @@
 <template>
     <div class="perzeption-navigation">
-        <router-link to="/"><strong>PerZeption 👁</strong></router-link>
+        <router-link to="/"><img src="../assets/perzeption-logo.svg"/></router-link>
         <a to="/link1">Our Product</a>
         <router-link to="/publication">Our Publications</router-link>
         <a to="/link2">About</a>
@@ -19,11 +19,17 @@
     display: flex;
     flex-flow: row wrap;
     justify-content: flex-start;
+    align-items: center;
     gap: 50px;
     background-color: $perzeption-dark-bg;
 
     a {
         color: $perzeption-text-color;
+    }
+
+    img {
+        height: 36px;
+        width: 100%;
     }
 
     .nuxt-link-active {
