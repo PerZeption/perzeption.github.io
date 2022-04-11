@@ -20,8 +20,12 @@ export default {
     background-color:$perzeption-dark-bg;
     color: $perzeption-text-color;
     padding: 40px $perzeption-page-padding;
-    display: inline-flex;
+    display: flex;
+    flex-direction: row;
     align-items: center;
-    gap: 50vw;
+
+    p {
+        margin-left: auto;
+    }
 }
 </style>

@@ -65,8 +65,7 @@ export default {
 }
 </script>
 
-<style lang
-        PerzeptionButton="scss">
+<style lang="scss">
 @import '../styles/_base';
 
 .perzeption-difference {
