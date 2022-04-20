@@ -8,7 +8,6 @@
 
     <perzeption-difference />
 
-    <perzeption-about />
   </section>
 </template>
 
@@ -18,7 +17,6 @@
 import perzeptionHome from '@/sections/perzeption-home.vue';
 import perzeptionDemo from '@/sections/perzeption-demo.vue';
 import perzeptionProduct from '@/sections/perzeption-product.vue';
-import perzeptionAbout from '@/sections/perzeption-about.vue';
 
 
 // Page components
@@ -32,7 +30,6 @@ export default {
     perzeptionHome,
     perzeptionDemo,
     perzeptionProduct,
-    perzeptionAbout,
     perzeptionDifference
   }
 }

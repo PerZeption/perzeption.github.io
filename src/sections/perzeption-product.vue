@@ -110,7 +110,7 @@ export default {
 @import '../styles/_base';
 
 .perzeption-product {
-    background-color: $perzeption-card-bg;
+    background-color: $perzeption-background-blue;
     padding: 80px;
 
     &__content {

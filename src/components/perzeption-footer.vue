@@ -17,8 +17,8 @@ export default {
 @import '../styles/_base';
 
 .perzeption-footer {
-    background-color:$perzeption-dark-bg;
-    color: $perzeption-text-color;
+    background-color:$perzeption-text-navy;
+    color: $perzeption-white;
     padding: 40px $perzeption-page-padding;
     display: flex;
     flex-direction: row;

@@ -44,10 +44,14 @@ export default {
     border-radius: 10px;
     font-weight: 550;
     color: white;
-    padding: 20px;
+    padding: 5px;
+
+    p {
+        padding: unset;
+    }
 
     &__default {
-        background-color: $perzeption-active-color;
+        background-color: $perzeption-primary-purple;
     }
 
     &__outline {

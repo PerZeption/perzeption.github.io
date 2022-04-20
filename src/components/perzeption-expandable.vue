@@ -41,7 +41,7 @@ export default {
 @import '../styles/_base';
 
 .perzeption-expandable {
-    background-color: $perzeption-card-bg;
+    background-color: $perzeption-background-blue;
     cursor: pointer;
     padding: 50px;
     width: 90%;

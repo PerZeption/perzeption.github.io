@@ -23,6 +23,6 @@ export default {
 @import './styles/_base';
 
 body { 
-  background-color: $perzeption-dark-bg;
+  background-color: $perzeption-text-navy;
 }
 </style>

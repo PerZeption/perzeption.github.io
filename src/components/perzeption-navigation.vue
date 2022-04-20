@@ -1,10 +1,8 @@
 <template>
     <div class="perzeption-navigation">
         <router-link to="/"><img src="../assets/perzeption-logo.svg"/></router-link>
-        <a to="/link1">Our Product</a>
         <router-link to="/publication">Our Publications</router-link>
-        <a to="/link2">About</a>
-        <a to="/link2">Contact</a>
+        <router-link to="/about-us">About Us</router-link>
     </div>
 </template>
 
@@ -21,10 +19,10 @@
     justify-content: flex-start;
     align-items: center;
     gap: 50px;
-    background-color: $perzeption-dark-bg;
+    background-color: $perzeption-text-navy;
 
     a {
-        color: $perzeption-text-color;
+        color: $perzeption-white;
     }
 
     img {

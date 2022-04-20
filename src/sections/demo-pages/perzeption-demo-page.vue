@@ -4,7 +4,7 @@
             <h1>Try out our test</h1>
             <p>This short trial will show you what we’re all about. Get accurate results with just a few short questions.</p>
             <perzeption-button class="perzeption-demo-page__button" type="outline" @click="$emit('update')">
-                Let's go!
+                <p>Let me try it!</p>
             </perzeption-button>
         </div>
     </section>
@@ -29,7 +29,8 @@ export default {
     height: 90vh;
     background-blend-mode: overlay, normal;
     background: no-repeat right/50% url("../../assets/perzeption-contrast.svg"),
-    no-repeat right/50% url("../../assets/perzeption-eye.svg");
+    no-repeat right/50% url("../../assets/perzeption-eye.svg"),
+    $perzeption-text-navy;
 
     &__text {
         margin-top: 25vh;

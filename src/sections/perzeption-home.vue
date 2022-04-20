@@ -2,10 +2,14 @@
     <perzeption-page>
         <section class="perzeption-home">
             <div class="perzeption-home__content">
-                <h1>Keep an eye on your <span class="perzeption-home__vision">vision</span></h1>
 
-                <p>This is a paragraph with an explanation. These sentences are short, 
-                and give a brief overview. It’s good to be a description.</p>
+                <div class="perzeption-home__content--title">
+                    <h1>Keep an eye on your <span class="perzeption-home__vision">vision</span></h1>
+
+                    <p><strong>Bringing virtual vision testing to eyecare providers and beyond...</strong></p>
+                </div>
+
+                <p>PerZeption aims to make vision tests accessible to everyone. Our tests are self-administrable, rapid, and meaningful. Take our exam preview appointment-free to learn more about your eyes. </p>
             </div>
         </section>
     </perzeption-page>
@@ -42,10 +46,19 @@ export default {
         margin: 0 auto;
         text-align: center;
         width: 600px;
+
+        &--title {
+            margin-bottom: 80px;
+
+            h1 {
+                margin-bottom: unset;
+            }
+        }
+
     }
 
     &__vision {
-        color: $perzeption-active-color;
+        color: $perzeption-primary-purple;
     }
 }
 </style>

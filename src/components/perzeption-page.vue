@@ -1,7 +1,7 @@
 <template>
-    <section class="perzeption-page" data-aos="fade-up" data-aos-duration="2000">
+    <div class="perzeption-page" data-aos="fade-up" data-aos-duration="2000">
         <slot />
-    </section>
+    </div>
 </template>
 
 <script>
@@ -19,7 +19,7 @@ export default {
 
 .perzeption-page {
     min-height: $perzeption-min-page-height;
-    color: $perzeption-text-color;
+    color: $perzeption-white;
 }
 
 </style>
