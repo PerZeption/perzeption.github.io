@@ -8,6 +8,10 @@
 </template>
 
 <script>
+/**
+ * The footer of the webpage that's included to display on every page.
+ */
+
 export default {
     name: 'perzeption-footer'
 }

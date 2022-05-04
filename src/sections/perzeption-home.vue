@@ -10,18 +10,30 @@
                 </div>
 
                 <p>PerZeption aims to make vision tests accessible to everyone. Our tests are self-administrable, rapid, and meaningful. Take our exam preview appointment-free to learn more about your eyes. </p>
+                
+                <perzeption-button type="outline" link="#demo">
+                    Let's go!
+                </perzeption-button>
             </div>
         </section>
     </perzeption-page>
 </template>
 
 <script>
+
+/**
+ * The top and first page on the website's landing page.
+ * Gives a breif introduction to PerZeption as a project.
+ */
+
 import perzeptionPage from '@/components/perzeption-page.vue'
+import perzeptionButton from '@/components/perzeption-button.vue';
 
 export default {
     name: 'perzeption-home',
     components: {
         perzeptionPage,
+        perzeptionButton,
     }
 }
 </script>

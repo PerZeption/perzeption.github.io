@@ -7,7 +7,7 @@
         </h1>
 
         <div class="perzeption-about-founders__people">
-          <img src="../../assets/peter.png" />
+          <img src="../assets/peter.png" />
 
           <span>
             <h2>Peter Bex</h2>
@@ -31,7 +31,7 @@
             </p>
           </span>
 
-            <img src="../../assets/jan.png" />
+            <img src="../assets/jan.png" />
         </div>
       </section>
 </perzeption-page>
@@ -51,7 +51,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import '../../styles/_base';
+@import '../styles/_base';
 
 .perzeption-about-founders {
     padding: $perzeption-page-padding;

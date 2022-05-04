@@ -1,25 +1,35 @@
 <template>
-    <perzeption-page>
-        <section class="perzeption-demo">
-            <component :is="currentComponent()" @update="nextStep()"></component>
-        </section>
-    </perzeption-page>
+    <section class="perzeption-demo" id="demo">
+        <component 
+        :is="currentComponent()" 
+        @back="prevStep()" 
+        @update="nextStep()" />
+    </section>
 </template>
 
 <script>
-import perzeptionButton from '@/components/perzeption-button.vue';
-import perzeptionPage from '@/components/perzeption-page.vue';
+/**
+ * The second section on the landing page.
+ * Will contain the different states of the demo section (e..a Acuity, Color Match, etc.)
+ * Different sections for this page can be found in `./demo-pages`
+ */
 
-import perzeptionDemoPage from './demo-pages/perzeption-demo-page.vue';
-import perzeptionDemoStart from './demo-pages/perzeption-demo-start.vue';
+// Components
+import perzeptionButton from '@/components/perzeption-button.vue';
+
+// Sections
+import perzeptionDemoHome from './demo-pages/perzeption-demo-home.vue';
+import perzeptionDemoAcuity from './demo-pages/perzeption-demo-acuity.vue';
+import perzeptionDemoAcuityTest from './demo-pages/perzeption-demo-acuity-test.vue';
 
 export default {
     name: 'perzeption-demo',
     components: {
         perzeptionButton,
-        perzeptionPage,
-        perzeptionDemoStart,
-        perzeptionDemoPage
+        perzeptionDemoHome,
+        perzeptionDemoAcuity,
+        perzeptionDemoAcuityTest,
+        
     },
     data() {
         return {
@@ -27,16 +37,32 @@ export default {
         }
     },
     methods: {
+        /**
+         * Decrements the step counter to return to the previous state
+         */
+        prevStep() {
+            this.demoStep--;
+        },
+
+        /**
+         * Increments the step counter to proceed to the next state
+         */
         nextStep() {
             this.demoStep++;
         },
 
+        /**
+         * Indicates which component (within `./demo-page`)
+         * should be displayed depending on `demoStep`
+         */
         currentComponent() {
             switch(this.demoStep) {
                 case 1:
-                    return "perzeptionDemoStart";
+                    return "perzeptionDemoAcuity";
+                case 2:
+                    return "perzeptionDemoAcuityTest";
                 default:
-                    return "perzeptionDemoPage";
+                    return "perzeptionDemoHome";
             }
         }
     }

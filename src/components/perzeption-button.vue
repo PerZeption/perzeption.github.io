@@ -1,12 +1,20 @@
 <template>
-    <div 
-    :class="'perzeption-button perzeption-button__' + this.type"  @click="$emit('click')">
-        <slot v-if="!link"/>
+    <div>
+        <div 
+        v-if="!link"
+        class="perzeption-button"
+        :class="this.type ? 'perzeption-button__' + this.type : ''"  
+        @click="$emit('click')">
+            <slot />
 
-            <a v-if="link"
-            :href="link" target="_blank">
-                <slot />
-            </a>
+        </div>
+
+        <a v-if="link"
+        class="perzeption-button"
+        :class="this.type ? 'perzeption-button__' + this.type : ''"  
+        :href="link" :target="this.newTab ? '_blank' : '_self'">
+            <slot />
+        </a>
     </div>
 </template>
 
@@ -28,7 +36,15 @@ export default {
         type: {
             type: String,
             required: false,
-            default: "default",
+            default: "",
+        },
+        /**
+         * If the button's link should open in a new tab.
+         */
+        newTab: {
+            type: Boolean,
+            required: false,
+            default: false,
         }
     }
 }
@@ -39,16 +55,18 @@ export default {
 
 .perzeption-button {
     cursor: pointer;
-    max-width: fit-content;
-    max-height: fit-content;
     border-radius: 10px;
     font-weight: 550;
     color: white;
-    padding: 5px;
+    display: inline-flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    padding: 15px 30px;
 
     p {
-        padding: unset;
+        margin: unset;
     }
+
 
     &__default {
         background-color: $perzeption-primary-purple;
@@ -56,6 +74,12 @@ export default {
 
     &__outline {
         border: solid;
+
+        &:hover {
+            transition: background-color 1s ease-in, color 1s;
+            background-color: white;
+            color: $perzeption-text-navy;
+        }
     }
 }
 

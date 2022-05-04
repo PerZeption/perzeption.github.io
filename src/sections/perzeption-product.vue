@@ -20,12 +20,10 @@
                         <img src="../assets/contrast.png" />
                         </swiper-slide>
                         <div class="swiper-pagination" slot="pagination"></div>
-                        <div class="swiper-button-prev" slot="button-prev"></div>
-                        <div class="swiper-button-next" slot="button-next"></div>
                     </swiper>
 
                     <div v-if="currSlide == 0">
-                        <h2>Find 1</h2>
+                        <h2>FIND Vision Exam</h2>
 
                         <p>
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
@@ -36,7 +34,7 @@
                     </div>
 
                     <div v-if="currSlide == 1">
-                        <h2>Find 2</h2>
+                        <h2>FIND Vision Exam</h2>
 
                         <p>
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
@@ -47,7 +45,7 @@
                     </div>
 
                     <div v-if="currSlide == 2">
-                        <h2>Find 3</h2>
+                        <h2>FIND Vision Exam</h2>
 
                         <p>
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
@@ -56,6 +54,8 @@
                             Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                         </p>
                     </div>
+
+                    <a href="/#/publication" target="_blank">View Publications</a>
                 </div>
             </div>
         </section>
@@ -63,8 +63,16 @@
 </template>
 
 <script>
+/**
+ * The third section on the landing page.
+ * Describes the various products PerZeption has to offer as a slideshow.
+ */
+
+// Dependency Components
 import { Swiper, SwiperSlide } from 'vue-awesome-swiper';
 import 'swiper/css/swiper.css';
+
+// Components
 import perzeptionPage from '@/components/perzeption-page.vue';
 
 export default {
@@ -81,6 +89,10 @@ export default {
                 slidesPerView: 1,
                 spaceBetween: 30,
                 loop: true,
+                autoplay: {
+                    delay: 2500,
+                    disableOnInteraction: false
+                },
                 pagination: {
                     el: '.swiper-pagination',
                     clickable: true
@@ -94,7 +106,8 @@ export default {
     },
     methods: {
         /**
-         * Sets the current index to the index of the slide in the gallery
+         * Sets the current index to the index of the slide in the gallery.
+         * @returns void
          */
         nextSlide() {
             this.currSlide += 1;
@@ -112,6 +125,11 @@ export default {
 .perzeption-product {
     background-color: $perzeption-background-blue;
     padding: 80px;
+
+    a {
+        color: white;
+        text-decoration: underline;
+    }
 
     &__content {
         h1 {

@@ -48,7 +48,7 @@
                             </p>
                             <p>Learn More</p>
                         </span>
-                        <img src="../assets/perzeption-arrow.svg" />
+                        <img class="perzeption-difference__arrow" src="../assets/perzeption-right-arrow.svg" />
                     </perzeption-button>
                 </div>
             </div>
@@ -57,8 +57,16 @@
 </template>
 
 <script>
+
+/**
+ * The fourth section of the landing page.
+ * Describes the difference PerZeption makes compared to typical 
+ * optomotrist offerings.
+ */
+
+// Components
 import perzeptionPage from '@/components/perzeption-page'
-import perzeptionButton from '../components/perzeption-button.vue'
+import perzeptionButton from '@/components/perzeption-button.vue'
 
 export default {
     name: 'perzeption-difference',
@@ -111,6 +119,11 @@ export default {
                 width: 50%;
             }
         }
+    }
+
+    &__arrow {
+        width: 100px;
+        margin-left: 50px;
     }
 }
 </style>
